@@ -24,4 +24,5 @@ VALUES (1, "Tom", "Jones", 1, 2),
        (7, "Stacey", "Slater", 6, NULL),
        (8, "Linda", "Mitchell", 7, 10),
        (9, "Harpreet", "Kaur", 7, 10),
-       (10, "Hasan", "Malik", 8, NULL);
+       (10, "Hasan", "Malik", 8, NULL),
+       (11, "Jason", "Statham", 8, NULL);
