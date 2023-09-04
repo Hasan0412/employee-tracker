@@ -12,26 +12,62 @@ const connection = mysql.createPool({
     queueLimit: 0,
 });
 
-// Function to view all departments
-const viewAllDepartments = async () => {
+// Function to view departments
+const viewDepartments = async () => {
     const [rows, fields] = await connection.execute('SELECT * FROM department');
     return rows;
 };
 
-// Function to view all roles
-const viewAllRoles = async () => {
+// Function to view roles
+const viewRoles = async () => {
     const [rows, fields] = await connection.execute('SELECT * FROM role');
     return rows;
 };
 
-// Function to view all employees
-const viewAllEmployees = async () => {
+// Function to view employees
+const viewEmployees = async () => {
     const [rows, fields] = await connection.execute('SELECT * FROM employee');
     return rows;
 };
 
+// Function for additional departments
+const additionalDepartment = async (name) => {
+    const result = await connection.execute(
+        'INSERT INTO department (name) VALUES (?)', [name]
+    );
+    return result;
+};
+
+// Function for additional roles
+const additionalRole = async (title, salary, department_id) => {
+    const result = await connection.execute(
+        'INSERT INTO role (title, salary, department_id) VALUES (?, ?, ?)', [title, salary, department_id]
+    );
+    return result;
+};
+
+// Function for additional employees
+const additionalEmployee = async (first_name, last_name, role_id, manager_id) => {
+    const result = await connection.execute(
+        'INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES (?, ?, ?, ?)', [first_name, last_name, role_id, manager_id]
+    );
+    return result;
+};
+
+// Function to change the role of a selected employee
+const changeEmployeeRole = async (role_id, employee_id) => {
+    const result = await connection.execute(
+        'UPDATE employee SET role_id = ? WHERE id = ?', [role_id, employee_id]
+    );
+    return result;
+};
+
 module.exports = {
-    viewAllDepartments,
-    viewAllRoles,
-    viewAllEmployees
+    viewDepartments,
+    viewRoles,
+    viewEmployees,
+    additionalDepartment,
+    additionalRole,
+    additionalEmployee,
+    changeEmployeeRole
 };
