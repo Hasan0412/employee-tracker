@@ -1,5 +1,7 @@
+// Import the mysql2 library to use in the code
 const mysql = require('mysql2');
 
+// Create a connection pool for the MySQL database
 const connection = mysql.createPool({
     host: 'localhost',
     user: 'root',
