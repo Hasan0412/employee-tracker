@@ -30,3 +30,8 @@ const viewAllEmployees = async () => {
     return rows;
 };
 
+module.exports = {
+    viewAllDepartments,
+    viewAllRoles,
+    viewAllEmployees
+};
