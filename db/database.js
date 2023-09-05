@@ -1,5 +1,5 @@
 // Import the mysql2 library to use in the code
-const mysql = require('mysql2');
+const mysql = require('mysql2/promise');
 
 // Create a connection pool for the MySQL database
 const connection = mysql.createPool({
