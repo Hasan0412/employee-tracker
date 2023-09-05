@@ -70,7 +70,21 @@ async function app() {
                 const manager_to_update_id = await promptEmployeeChoice('Select a new Manager for this employee:');
                 await database.changeEmployeeManager(employee_to_update_manager_id, manager_to_update_id);
                 break;
+            case 'Remove a Department':
+                const department_to_delete_id = await promptDepartmentChoice();
+                await database.removeDepartment(department_to_delete_id);
+                break;
+            case 'Remove a Role':
+                const role_to_delete_id = await promptRoleChoice();
+                await database.removeRole(role_to_delete_id);
+                break;
+            case 'Remove an Employee':
+                const employee_to_delete_id = await promptEmployeeChoice('Select an employee to remove:');
+                await database.removeEmployee(employee_to_delete_id);
+                break;
         }
     }
+
+    process.exit();
 
 };
