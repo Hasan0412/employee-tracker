@@ -12,3 +12,21 @@ You need to create the MySQL database and tables by running the provided SQL sch
 - mysql -u <your_username> -p < seeds.sql
 
 Once you have these prerequisites in place, you should be able to run the employee tracker application using the node index.js command.
+
+## Screenshots
+
+#### When you type the command 'node index.js', this will appear:
+
+![screenshot](/Screenshots/options.png)
+
+#### When 'Show All Departments' is clicked:
+
+![screenshot](/Screenshots/depts.png)
+
+#### When 'Show All Roles' is clicked:
+
+![screenshot](/Screenshots/roles.png)
+
+#### Whne 'Show All Employees' is clicked:
+
+![screenshot](/Screenshots/employees.png)
