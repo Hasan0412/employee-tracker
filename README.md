@@ -30,3 +30,7 @@ Once you have these prerequisites in place, you should be able to run the employ
 #### Whne 'Show All Employees' is clicked:
 
 ![screenshot](/Screenshots/employees.png)
+
+## Link
+
+[Walkthrough](https://drive.google.com/file/d/1sjOPHKYS7Tq_re8Th5Vblxs9mfws2c0D/view?usp=drive_link)
