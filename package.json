@@ -4,14 +4,14 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1", 
-      "start": "node index.js"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node index.js"
     },
     "keywords": [],
     "author": "Hasan Malik",
     "license": "ISC",
     "dependencies": {
-      "inquirer": "^8.2.4",
-      "mysql2": "^3.5.2"
+        "inquirer": "^8.2.6",
+        "mysql2": "^3.6.0"
     }
-  }
+}
