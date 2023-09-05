@@ -116,7 +116,7 @@ async function promptRoleChoice() {
         value: role.id,
     }));
 
-    const { role_id } = await inquirer.prompt({
+    const {role_id} = await inquirer.prompt({
         type: 'list',
         name: 'role_id',
         message: 'Select the role:',
@@ -137,7 +137,7 @@ async function promptEmployeeChoice(message) {
             })),
         ];
 
-    const { employee_id } = await inquirer.prompt({
+    const {employee_id} = await inquirer.prompt({
         type: 'list',
         name: 'employee_id',
         message: message,
