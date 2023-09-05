@@ -14,8 +14,8 @@ const connection = mysql.createPool({
 
 // Function to view departments
 const viewDepartments = async () => {
-    const [rows, fields] = await connection.execute('SELECT * FROM department');
-    return rows;
+    const [rows, fields] = await connection.execute('SELECT name FROM department');
+    return rows.map(row => row.name);
 };
 
 // Function to view roles
@@ -32,7 +32,7 @@ const viewEmployees = async () => {
 
 // Function for additional departments
 const additionalDepartment = async (name) => {
-    const departmentName = name || '';
+    const departmentName = name || null;
     const result = await connection.execute(
         'INSERT INTO department (name) VALUES (?)', [departmentName]
     );
