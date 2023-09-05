@@ -32,11 +32,13 @@ const viewEmployees = async () => {
 
 // Function for additional departments
 const additionalDepartment = async (name) => {
+    const departmentName = name || '';
     const result = await connection.execute(
-        'INSERT INTO department (name) VALUES (?)', [name]
+        'INSERT INTO department (name) VALUES (?)', [departmentName]
     );
     return result;
 };
+
 
 // Function for additional roles
 const additionalRole = async (title, salary, department_id) => {
