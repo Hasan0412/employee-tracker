@@ -1,5 +1,5 @@
 const inquirer = require('inquirer');
-const database = require('/db/database');
+const database = require('./db/database.js');
 
 async function app() {
     let continueExecution = true;
@@ -81,6 +81,9 @@ async function app() {
             case 'Remove an Employee':
                 const employee_to_delete_id = await promptEmployeeChoice('Select an employee to remove:');
                 await database.removeEmployee(employee_to_delete_id);
+                break;
+            case 'Quit Application':
+                continueExecution = false;
                 break;
         }
     }
